@@ -1,4 +1,3 @@
-  
 import 'dart:convert';
 import 'dart:ui';
 
@@ -33,5 +32,4 @@ class ClassData {
         'assignmentList':
             jsonEncode(assignmentList) //New toJson method might not work here
       };
-
 }

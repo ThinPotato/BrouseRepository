@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-class Assignment{
+class Assignment {
   String name;
   bool isComplete;
   int numberOfQuestions;
@@ -12,24 +12,21 @@ class Assignment{
       this.isComplete,
       this.numberOfQuestions,
       this.notes,
-      this.percentComplete
-    });
+      this.percentComplete});
 
   factory Assignment.fromJson(Map<String, dynamic> json) {
-
     return Assignment(
         name: json['name'],
         isComplete: json['isComplete'],
         numberOfQuestions: json['numberOfQuestions'],
         notes: json['notes'],
-        percentComplete: json['percentComplete']
-        );
+        percentComplete: json['percentComplete']);
   }
   Map<String, dynamic> toJson() => {
         'name': name,
         'isComplete': isComplete,
         'numberOfQuestions': numberOfQuestions,
-        'notes' : notes,
+        'notes': notes,
         'percentComplete': percentComplete
       };
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hackathon_2020/data/data_manager.dart';
 import 'package:hackathon_2020/scheduler/scheduler.dart';
 
-DataManager mainData;
+DataManager mainData = DataManager();
 Scheduler mainScheduler;
 
 void main() {
