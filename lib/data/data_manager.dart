@@ -8,7 +8,7 @@ import 'dart:io';
 import '../main.dart';
 
 class DataManager {
-  List<ClassData> data;
+  List<ClassData> data = List();
 
   DataManager() {
     _getClassData();
@@ -16,6 +16,7 @@ class DataManager {
 
   Future<void> _getClassData() async {
     String s = await readData();
+    print(s);
     if (s.length > 1) {
       List<dynamic> parsedJson = jsonDecode(s);
       data = parsedJson.map((f) => ClassData.fromJson(f)).toList();
@@ -36,7 +37,7 @@ class DataManager {
   Future<File> writeData() async {
     final file = await _localFile;
     // Write the file.
-    return file.writeAsString(jsonEncode(mainData));
+    return file.writeAsString(jsonEncode(data));
   }
 
   Future<String> readData() async {
@@ -48,6 +49,7 @@ class DataManager {
       print(contents);
       return contents;
     } catch (e) {
+      print('error');
       // If encountering an error, return 0.
       return '';
     }
