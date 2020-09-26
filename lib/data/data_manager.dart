@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:hackathon_2020/data/assignment_data.dart';
 import 'package:hackathon_2020/data/class_data.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
