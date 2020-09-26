@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_2020/ui_elements/banner.dart';
-import 'package:hackathon_2020/ui_elements/long_assignment.dart';
+import 'package:hackathon_2020/ui_elements/long_class.dart';
 import 'package:hackathon_2020/ui_elements/mini_assignment.dart';
 import 'package:hackathon_2020/ui_elements/progress_bar.dart';
 import 'package:hackathon_2020/main.dart';
@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.fromLTRB(2, 4, 2, 0),
                 child: MiniAssignment(),
               );
-            }, childCount: 3),
+            }, childCount: 5),
           ),
           SliverToBoxAdapter(
               child: Padding(
@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
                   SliverChildBuilderDelegate((BuildContext context, int index) {
             return Padding(
               padding: const EdgeInsets.fromLTRB(2, 4, 2, 0),
-              child: LongAssignment(),
+              child: LongClass(),
             );
           }, childCount: 3))
         ],

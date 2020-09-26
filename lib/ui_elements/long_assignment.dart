@@ -3,7 +3,7 @@ import 'package:hackathon_2020/data/assignment_data.dart';
 import 'package:hackathon_2020/data/class_data.dart';
 
 class LongAssignment extends StatefulWidget {
-  final ClassData data;
+  final Assignment data;
   LongAssignment({Key key, this.data}) : super(key: key);
 
   @override
